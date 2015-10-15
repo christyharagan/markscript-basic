@@ -1,6 +1,6 @@
 {
   "name": "markscript-basic",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Basic runtime interfaces and utilities for MarkScript projects.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -17,6 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "marklogic-typescript-definitions": "^0.3.0"
+    "marklogic-typescript-definitions": "^0.3.0",
+    "markscript-core": "^0.5.8"
   }
 }

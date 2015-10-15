@@ -1,15 +1,3 @@
-export enum TRIGGER_COMMIT {
-  PRE, POST
-}
-
-export enum TRIGGER_STATE {
-  CREATE, MODIFY, DELETE
-}
-
-export enum FrequencyType {
-  MINUTES, HOURS, DAYS
-}
-
 export enum ScalarType {
   int,
   unsignedInt,
@@ -70,7 +58,7 @@ export function mlRuleSet(definition: RuleSetOptions) {
 }
 
 export interface TaskOptions {
-  type: FrequencyType
+  type: MarkScript.FrequencyType
   frequency: number
   user?: string
   name?: string
@@ -84,9 +72,9 @@ export function mlTask(definition?: TaskOptions) {
 export interface AlertOptions {
   name?: string
   scope: string
-  states?: TRIGGER_STATE[]
+  states?: MarkScript.TRIGGER_STATE[]
   depth?: number
-  commit?: TRIGGER_COMMIT
+  commit?: MarkScript.TRIGGER_COMMIT
 }
 
 export function mlAlert(definition?: AlertOptions) {
@@ -94,7 +82,11 @@ export function mlAlert(definition?: AlertOptions) {
   }
 }
 
-export function mlExtension() {
+export interface ExtensionOptions {
+  name?: string
+}
+
+export function mlExtension(definition?: ExtensionOptions) {
   return function(target: any) {
     return target
   }
