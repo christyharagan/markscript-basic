@@ -37,11 +37,6 @@ export interface RuleSetOptions {
   path: string
 }
 
-export function mlDeploy() {
-  return function(target: any): void {
-  }
-}
-
 export function geoIndexed(definition?: GeoIndexedOptions) {
   return function(target: Object, propertyKey: string): void {
   }
