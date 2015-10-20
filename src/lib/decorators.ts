@@ -1,4 +1,4 @@
-export enum ScalarType {
+export const enum ScalarType {
   int,
   unsignedInt,
   long,

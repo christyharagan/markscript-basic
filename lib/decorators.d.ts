@@ -1,4 +1,4 @@
-export declare enum ScalarType {
+export declare const enum ScalarType {
     int = 0,
     unsignedInt = 1,
     long = 2,
