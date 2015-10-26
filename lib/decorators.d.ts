@@ -30,12 +30,8 @@ export interface GeoIndexedOptions {
     pointFormat?: string;
     coordinateSystem?: string;
 }
-export interface RuleSetOptions {
-    path: string;
-}
 export declare function geoIndexed(definition?: GeoIndexedOptions): (target: Object, propertyKey: string) => void;
 export declare function rangeIndexed(definition?: RangeIndexedOptions): (target: Object, propertyKey: string) => void;
-export declare function mlRuleSet(definition: RuleSetOptions): (target: Object, propertyKey: string, method: TypedPropertyDescriptor<() => string>) => void;
 export interface TaskOptions {
     type: MarkScript.FrequencyType;
     frequency: number;

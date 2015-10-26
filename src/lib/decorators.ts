@@ -33,10 +33,6 @@ export interface GeoIndexedOptions {
   coordinateSystem?: string
 }
 
-export interface RuleSetOptions {
-  path: string
-}
-
 export function geoIndexed(definition?: GeoIndexedOptions) {
   return function(target: Object, propertyKey: string): void {
   }
@@ -44,11 +40,6 @@ export function geoIndexed(definition?: GeoIndexedOptions) {
 
 export function rangeIndexed(definition?: RangeIndexedOptions) {
   return function(target: Object, propertyKey: string): void {
-  }
-}
-
-export function mlRuleSet(definition: RuleSetOptions) {
-  return function(target: Object, propertyKey: string, method: TypedPropertyDescriptor<() => string>): void {
   }
 }
 
